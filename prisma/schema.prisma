@@ -1,0 +1,223 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+enum Role {
+  ADMIN
+  KONSULTAN
+  UMKM
+}
+
+enum ConsultationStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model User {
+  id             String             @id @default(uuid())
+  name           String?
+  email          String             @unique
+  passwordHash   String?
+  role           Role               @default(UMKM)
+  emailVerified  DateTime?
+  image          String?
+  businessProfile BusinessProfile?
+  consultant     Consultant?
+  assessments    FinancialAssessment[]
+  consultations  Consultation[]      @relation("ConsumerConsultations")
+  authoredArticles Article[]
+  roadmaps       Roadmap[]
+  forumTopics    ForumTopic[]
+  forumComments  ForumComment[]
+  forumLikes     ForumLike[]
+  chatHistory    ChatHistory[]
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+}
+
+model BusinessProfile {
+  id              String   @id @default(uuid())
+  user            User     @relation(fields: [userId], references: [id])
+  userId          String   @unique
+  businessName    String
+  industry        String
+  establishedYear Int
+  employeeCount   Int
+  monthlyRevenue  Float
+  monthlyProfit   Float
+  initialCapital  Float
+  location        String
+  whatsapp        String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model FinancialAssessment {
+  id                 String        @id @default(uuid())
+  user               User          @relation(fields: [userId], references: [id])
+  userId             String
+  monthlyRevenue     Float
+  priorRevenue       Float
+  operatingCost      Float
+  payrollCost        Float
+  otherCost          Float
+  totalDebt          Float
+  monthlyInstallment Float
+  businessCapital    Float
+  cashBalance        Float
+  score              FinancialScore?
+  roadmap            Roadmap?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+}
+
+model FinancialScore {
+  id                   String              @id @default(uuid())
+  assessment           FinancialAssessment @relation(fields: [assessmentId], references: [id])
+  assessmentId         String              @unique
+  profitabilityScore   Int
+  liquidityScore       Int
+  debtScore            Int
+  growthScore          Int
+  finalScore           Int
+  category             String
+  strengths            String[]
+  weaknesses           String[]
+  recommendations      String[]
+  createdAt            DateTime            @default(now())
+}
+
+model Roadmap {
+  id            String               @id @default(uuid())
+  user          User                 @relation(fields: [userId], references: [id])
+  userId        String
+  assessment    FinancialAssessment? @relation(fields: [assessmentId], references: [id])
+  assessmentId  String?              @unique
+  target3Months String
+  target6Months String
+  target1Year   String
+  tasks         RoadmapTask[]
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+}
+
+model RoadmapTask {
+  id         String   @id @default(uuid())
+  roadmap    Roadmap  @relation(fields: [roadmapId], references: [id])
+  roadmapId  String
+  title      String
+  completed  Boolean  @default(false)
+}
+
+model Consultant {
+  id            String         @id @default(uuid())
+  user          User           @relation(fields: [userId], references: [id])
+  userId        String         @unique
+  bio           String
+  speciality    String
+  consultations Consultation[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model Consultation {
+  id            String             @id @default(uuid())
+  user          User               @relation("ConsumerConsultations", fields: [userId], references: [id])
+  userId        String
+  consultant    Consultant         @relation(fields: [consultantId], references: [id])
+  consultantId  String
+  scheduledAt   DateTime
+  status        ConsultationStatus @default(PENDING)
+  notes         ConsultationNote[]
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+}
+
+model ConsultationNote {
+  id             String       @id @default(uuid())
+  consultation   Consultation @relation(fields: [consultationId], references: [id])
+  consultationId String
+  content        String
+  createdAt      DateTime     @default(now())
+}
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  slug      String    @unique
+  articles  Article[]
+  createdAt DateTime  @default(now())
+}
+
+model Article {
+  id          String    @id @default(uuid())
+  title       String
+  slug        String    @unique
+  excerpt     String
+  content     String
+  image       String?
+  published   Boolean   @default(false)
+  category    Category  @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  author      User      @relation(fields: [authorId], references: [id])
+  authorId    String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Template {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  filePath    String
+  category    String
+  createdAt   DateTime @default(now())
+}
+
+model ForumTopic {
+  id         String         @id @default(uuid())
+  title      String
+  content    String
+  category   String
+  author     User           @relation(fields: [authorId], references: [id])
+  authorId   String
+  comments   ForumComment[]
+  likes      ForumLike[]
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+}
+
+model ForumComment {
+  id        String     @id @default(uuid())
+  topic     ForumTopic @relation(fields: [topicId], references: [id])
+  topicId   String
+  author    User       @relation(fields: [authorId], references: [id])
+  authorId  String
+  content   String
+  createdAt DateTime   @default(now())
+}
+
+model ForumLike {
+  id        String     @id @default(uuid())
+  topic     ForumTopic @relation(fields: [topicId], references: [id])
+  topicId   String
+  user      User       @relation(fields: [userId], references: [id])
+  userId    String
+  createdAt DateTime   @default(now())
+  @@unique([topicId, userId])
+}
+
+model ChatHistory {
+  id         String   @id @default(uuid())
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  sessionId  String
+  question   String
+  answer     String
+  createdAt  DateTime @default(now())
+}

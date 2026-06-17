@@ -1,0 +1,347 @@
+@import "tailwindcss";
+
+/* ── Brand Color System ──
+   Klinik Keuangan UMKM Visual Identity:
+   - Primary Blue:    #0F4C9A  (navigation, headings, CTAs, icons)
+   - Secondary Blue:  #1E73D8  (hover states, links, interactive elements)
+   - Success Green:   #37B24D  (financial health, positive indicators)
+   - Neutral Gray:    #6B7280  (supporting text, borders, labels)
+   - Background:      #FFFFFF  (main backgrounds, dominant ~80%)
+   ──────────────────────── */
+
+@theme {
+  --color-brand-primary: #0F4C9A;
+  --color-brand-primary-dark: #0A3A75;
+  --color-brand-primary-light: #E8F0FE;
+  --color-brand-secondary: #1E73D8;
+  --color-brand-secondary-light: #D6EAFF;
+  --color-brand-navy: #0A2540;
+  --color-brand-navy-light: #162F4A;
+  --color-brand-green: #37B24D;
+  --color-brand-green-light: #E6F9EC;
+  --color-brand-gray: #6B7280;
+  --color-brand-gray-light: #F3F4F6;
+  --color-brand-gray-dark: #374151;
+
+  --font-sans: "Inter", "SF Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  /* Brand Colors */
+  --color-brand-primary: #0F4C9A;
+  --color-brand-primary-dark: #0A3A75;
+  --color-brand-primary-light: #E8F0FE;
+  --color-brand-secondary: #1E73D8;
+  --color-brand-secondary-light: #D6EAFF;
+  --color-brand-navy: #0A2540;
+  --color-brand-navy-light: #162F4A;
+
+  /* Neutral Colors */
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+  --color-section: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  /* Text Colors */
+  --color-text: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  --color-text-inverse: #ffffff;
+
+  /* Semantic Colors */
+  --color-success: #37B24D;
+  --color-success-bg: #E6F9EC;
+  --color-warning: #D97706;
+  --color-warning-bg: #FFFBEB;
+  --color-error: #DC2626;
+  --color-error-bg: #FEF2F2;
+
+  /* Typography */
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Border Radius — Government-grade clean */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  /* Shadows — Subtle, premium */
+  --shadow-card: 0 1px 3px 0 rgba(15, 76, 154, 0.04), 0 1px 2px -1px rgba(15, 76, 154, 0.03);
+  --shadow-elevated: 0 4px 16px 0 rgba(15, 76, 154, 0.06), 0 2px 4px -2px rgba(15, 76, 154, 0.04);
+  --shadow-dropdown: 0 8px 32px 0 rgba(15, 76, 154, 0.08);
+  --shadow-card-hover: 0 8px 24px 0 rgba(15, 76, 154, 0.08), 0 4px 8px -2px rgba(15, 76, 154, 0.04);
+
+  color-scheme: light;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--color-brand-primary);
+  color: white;
+}
+
+/* ── Typography ──────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+
+/* ── Focus Ring ──────────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-secondary);
+  outline-offset: 2px;
+}
+
+/* ── Transitions ─────────────────────────────────────────────────── */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* ── Dashboard Layout ────────────────────────────────────────────── */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #F8FAFC;
+}
+
+.dashboard-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 272px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0A2540 0%, #0F4C9A 100%);
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.dashboard-main {
+  flex: 1;
+  margin-left: 272px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 32px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Sidebar Navigation ──────────────────────────────────────────── */
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.sidebar-nav-item:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-nav-item.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+}
+
+.sidebar-nav-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: #37B24D;
+  border-radius: 0 3px 3px 0;
+}
+
+.sidebar-section-label {
+  padding: 0 16px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── KPI Cards ───────────────────────────────────────────────────── */
+.kpi-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.2s ease;
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-elevated);
+  border-color: transparent;
+}
+
+.kpi-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Score Ring ──────────────────────────────────────────────────── */
+.score-ring-progress {
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Progress Bar ────────────────────────────────────────────────── */
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #E5E7EB;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.05s; opacity: 0; }
+.stagger-2 { animation-delay: 0.1s; opacity: 0; }
+.stagger-3 { animation-delay: 0.15s; opacity: 0; }
+.stagger-4 { animation-delay: 0.2s; opacity: 0; }
+.stagger-5 { animation-delay: 0.25s; opacity: 0; }
+.stagger-6 { animation-delay: 0.3s; opacity: 0; }
+
+/* ── Mobile Responsive ───────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .dashboard-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .dashboard-content {
+    padding: 20px 16px;
+  }
+
+  .dashboard-topbar {
+    padding: 0 16px;
+  }
+}
