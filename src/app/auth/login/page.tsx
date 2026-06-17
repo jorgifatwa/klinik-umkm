@@ -84,12 +84,12 @@ export default function LoginPage() {
             <div className="flex items-center gap-3 mb-14">
               <img
                 src="/logo.png"
-                alt="Klinik Keuangan UMKM"
+                alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
                 className="h-10 w-10 rounded-xl object-cover ring-2 ring-white/10"
               />
               <div>
                 <p className="text-sm font-bold tracking-tight text-white">
-                  Klinik Keuangan UMKM
+                  SUFICSUFICSUFIC&apos;Capos;Capos;C
                 </p>
                 <p className="text-[11px] font-medium text-white/40">
                   Platform Pendampingan Keuangan
@@ -194,12 +194,12 @@ export default function LoginPage() {
               <Link href="/" className="inline-flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="Klinik Keuangan UMKM"
+                  alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
                   <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                    Klinik Keuangan UMKM
+                    SUFICSUFICSUFIC&apos;Capos;Capos;C
                   </p>
                   <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                     Platform Pendampingan Keuangan

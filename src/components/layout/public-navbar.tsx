@@ -22,12 +22,12 @@ export function PublicNavbar() {
         <Link href="/" className="flex items-center gap-2.5">
           <img
             src="/logo.png"
-            alt="Klinik Keuangan UMKM"
+            alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
             className="h-9 w-9 rounded-xl object-cover"
           />
           <div className="hidden sm:block">
             <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-              Klinik Keuangan UMKM
+              SUFICSUFICSUFIC&apos;Capos;Capos;C
             </p>
             <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
               Platform Pendampingan Keuangan

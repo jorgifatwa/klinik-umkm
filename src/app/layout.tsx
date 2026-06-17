@@ -3,7 +3,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: "Klinik Keuangan UMKM",
+  title: "SUFICSUFICSUFIC&apos;Capos;Capos;C",
   description: "Aplikasi konsultasi dan pemeriksaan kesehatan keuangan UMKM.",
 };
 

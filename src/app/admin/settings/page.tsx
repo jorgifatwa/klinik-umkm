@@ -30,7 +30,7 @@ export default async function AdminSettingsPage() {
       <div className="space-y-6">
         <div className="rounded-2xl border border-gray-200 bg-white p-6">
           <h2 className="text-[17px] font-bold text-gray-900">Pengaturan Platform</h2>
-          <p className="mt-1 text-[12.5px] text-gray-500">Informasi dan statistik platform Klinik Keuangan UMKM.</p>
+          <p className="mt-1 text-[12.5px] text-gray-500">Informasi dan statistik platform SUFICSUFICSUFIC&apos;Capos;Capos;C.</p>
         </div>
 
         {/* System Stats */}
@@ -60,7 +60,7 @@ export default async function AdminSettingsPage() {
           <h3 className="text-[14px] font-bold text-gray-900">Informasi Platform</h3>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {[
-              { label: "Nama Platform", value: "Klinik Keuangan UMKM" },
+              { label: "Nama Platform", value: "SUFICSUFICSUFIC&apos;Capos;Capos;C" },
               { label: "Versi", value: "1.0.0" },
               { label: "Framework", value: "Next.js" },
               { label: "Database", value: "PostgreSQL (Prisma)" },

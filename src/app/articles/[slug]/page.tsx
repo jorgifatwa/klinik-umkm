@@ -259,7 +259,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                       {article.author.name || "Tim Klinik UMKM"}
                     </p>
                     <p className="text-sm text-gray-500">
-                      Penulis — Klinik Keuangan UMKM
+                      Penulis — SUFICSUFICSUFIC&apos;Capos;Capos;C
                     </p>
                     <p className="mt-1 text-xs text-gray-400">
                       Ditulis pada {formattedDate}

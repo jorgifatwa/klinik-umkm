@@ -155,7 +155,7 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "Apa itu Klinik Keuangan UMKM?",
+    q: "Apa itu SUFICSUFICSUFIC&apos;Capos;Capos;C?",
     a: "Platform digital resmi yang membantu pelaku UMKM memahami kondisi keuangan usaha melalui assessment otomatis, mendapatkan rekomendasi pengembangan, mengakses edukasi, dan berkonsultasi dengan ahlinya.",
   },
   {
@@ -300,12 +300,12 @@ export default function Home() {
           <Link href="/" className="flex items-center gap-2.5">
             <img
               src="/logo.png"
-              alt="Klinik Keuangan UMKM"
+              alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
               className="h-9 w-9 rounded-xl object-cover"
             />
             <div className="hidden sm:block">
               <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                Klinik Keuangan UMKM
+                SUFICSUFICSUFIC&apos;Capos;Capos;C
               </p>
               <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                 Platform Pendampingan Keuangan
@@ -1022,11 +1022,11 @@ export default function Home() {
               <Link href="/" className="flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="Klinik Keuangan UMKM"
+                  alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
-                  <p className="text-sm font-bold text-[#0F4C9A]">Klinik Keuangan UMKM</p>
+                  <p className="text-sm font-bold text-[#0F4C9A]">SUFICSUFICSUFIC&apos;Capos;Capos;C</p>
                 </div>
               </Link>
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
@@ -1115,7 +1115,7 @@ export default function Home() {
           {/* Bottom Bar */}
           <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-100 py-6 sm:flex-row">
             <p className="text-xs text-gray-400">
-              © 2026 Klinik Keuangan UMKM. Hak Cipta Dilindungi.
+              © 2026 SUFICSUFICSUFIC&apos;Capos;Capos;C. Hak Cipta Dilindungi.
             </p>
             <div className="flex items-center gap-5 text-xs text-gray-400">
               <Link href="/auth/login" className="transition-colors hover:text-[#0F4C9A]">
