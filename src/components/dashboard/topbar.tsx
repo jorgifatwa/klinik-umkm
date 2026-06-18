@@ -101,7 +101,7 @@ export function DashboardTopBar({ title, breadcrumbs = [], onMenuToggle }: TopBa
               </div>
               <div className="max-h-64 overflow-y-auto">
                 <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer border-b border-gray-50">
-                  <p className="text-[12.5px] text-gray-700 font-medium">Selamat datang di SUFIC'C</p>
+                  <p className="text-[12.5px] text-gray-700 font-medium">Selamat datang di {"SUFIC'C"}</p>
                   <p className="text-[11px] text-gray-500 mt-0.5">Platform keuangan Anda sudah aktif</p>
                 </div>
               </div>

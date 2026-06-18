@@ -298,14 +298,14 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <img
-              src="/logo.png"
-              alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
-              className="h-9 w-9 rounded-xl object-cover"
-            />
+              <img
+                src="/logo.png"
+                alt={"SUFIC'C"}
+                className="h-9 w-9 rounded-xl object-cover"
+              />
             <div className="hidden sm:block">
               <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                SUFIC'C
+                {"SUFIC'C"}
               </p>
               <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                 Platform Pendampingan Keuangan
@@ -444,7 +444,7 @@ export default function Home() {
                       className="h-8 w-8 rounded-lg object-cover"
                     />
                     <div>
-                      <p className="text-xs font-semibold text-gray-900">Dashboard SUFIC'C</p>
+                      <p className="text-xs font-semibold text-gray-900">Dashboard {"SUFIC'C"}</p>
                       <p className="text-[10px] text-gray-400">Ringkasan Keuangan</p>
                     </div>
                   </div>
@@ -1022,11 +1022,11 @@ export default function Home() {
               <Link href="/" className="flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="SUFIC'C"
+                  alt={"SUFIC'C"}
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
-                  <p className="text-sm font-bold text-[#0F4C9A]">SUFIC'C</p>
+                  <p className="text-sm font-bold text-[#0F4C9A]">{"SUFIC'C"}</p>
                   <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                     Sustainable Financial Clinic Cianjur
                   </p>
@@ -1118,7 +1118,7 @@ export default function Home() {
           {/* Bottom Bar */}
           <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-100 py-6 sm:flex-row">
             <p className="text-xs text-gray-400">
-              © 2026 SUFIC'C. All Rights Reserved.
+              © 2026 {"SUFIC'C"}. All Rights Reserved.
             </p>
             <div className="flex items-center gap-5 text-xs text-gray-400">
               <Link href="/auth/login" className="transition-colors hover:text-[#0F4C9A]">

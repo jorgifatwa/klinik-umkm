@@ -227,10 +227,10 @@ export function DashboardSidebar({ open, onClose }: SidebarProps) {
         {/* Brand */}
         <div className="px-5 py-5 flex items-center gap-3 border-b border-white/10">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 backdrop-blur">
-            <img src="/logo.png" alt="SUFIC'C" className="h-6 w-6 rounded-lg object-cover" />
+            <img src="/logo.png" alt={"SUFIC'C"} className="h-6 w-6 rounded-lg object-cover" />
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-bold text-white tracking-tight">SUFIC'C</p>
+            <p className="text-sm font-bold text-white tracking-tight">{"SUFIC'C"}</p>
             <p className="text-[10.5px] text-white/40 font-medium">Sustainable Financial Clinic Cianjur</p>
           </div>
         </div>

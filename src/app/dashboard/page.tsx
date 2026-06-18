@@ -80,7 +80,7 @@ export default async function DashboardPage() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0A2540] via-[#0F4C9A] to-[#1E73D8] p-6 sm:p-8">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_20%,rgba(55,178,77,0.15),transparent_50%)]" />
             <div className="relative">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">Dashboard SUFIC'C</p>
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">Dashboard {"SUFIC'C"}</p>
               <h1 className="mt-2 text-[24px] sm:text-[26px] font-bold text-white">
                 Halo, {user.name ?? "Pelaku UMKM"} 👋
               </h1>

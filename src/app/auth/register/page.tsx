@@ -86,12 +86,12 @@ export default function RegisterPage() {
             <div className="flex items-center gap-3 mb-14">
               <img
                 src="/logo.png"
-                alt="SUFIC'C"
+                alt={"SUFIC'C"}
                 className="h-10 w-10 rounded-xl object-cover ring-2 ring-white/10"
               />
               <div>
                 <p className="text-sm font-bold tracking-tight text-white">
-                  SUFIC'C
+                  {"SUFIC'C"}
                 </p>
                 <p className="text-[11px] font-medium text-white/40">
                   Sustainable Financial Clinic Cianjur
@@ -101,7 +101,7 @@ export default function RegisterPage() {
 
             {/* Headline */}
             <h1 className="text-4xl font-bold tracking-tight text-white leading-[1.15]">
-              Bergabung dengan SUFIC'C
+              Bergabung dengan {"SUFIC'C"}
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/60 max-w-md">
               Mewujudkan Cianjur yang Berdaya melalui Keuangan yang Cerdas dan Berkelanjutan
@@ -196,12 +196,12 @@ export default function RegisterPage() {
               <Link href="/" className="inline-flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="SUFIC'C"
+                  alt={"SUFIC'C"}
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
                   <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                    SUFIC'C
+                    {"SUFIC'C"}
                   </p>
                   <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                     Sustainable Financial Clinic Cianjur
