@@ -5,6 +5,13 @@ import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { type ReactNode } from "react";
 
+interface NavItem {
+  href: string;
+  label: string;
+  icon: string;
+  matchChildren?: boolean;
+}
+
 interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
@@ -47,7 +54,7 @@ const consultantNav = [
     items: [
       { href: "/consultant", label: "Dashboard Konsultan", icon: "consultant" },
       { href: "/consultant/konsultasi", label: "Konsultasi", icon: "consultation" },
-      { href: "/consultant/clients", label: "Klien Saya", icon: "users" },
+      { href: "/consultant/clients", label: "Klien Saya", icon: "users", matchChildren: true },
       { href: "/consultant/profile", label: "Profil Konsultan", icon: "building" },
     ],
   },
@@ -57,10 +64,9 @@ const adminNav = [
   {
     label: "Administration",
     items: [
-      { href: "/admin/dashboard", label: "Admin Dashboard", icon: "admin" },
+      { href: "/admin", label: "Admin Dashboard", icon: "admin" },
       { href: "/admin/users", label: "User Management", icon: "users" },
-      { href: "/admin/consultations", label: "Konsultasi", icon: "consultation" },
-      { href: "/admin/settings", label: "Pengaturan", icon: "admin" },
+      { href: "/admin/consultations", label: "Konsultasi", icon: "consultation", matchChildren: true },
     ],
   },
 ];
@@ -180,11 +186,13 @@ export function DashboardSidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  const isActive = (href: string) => {
-    return pathname === href;
+  const isActive = (href: string, matchChildren = false) => {
+    if (pathname === href) return true;
+    if (matchChildren && pathname.startsWith(href + "/")) return true;
+    return false;
   };
 
-  const renderNavSection = (section: { label: string; items: typeof navSections[0]["items"] }) => (
+  const renderNavSection = (section: { label: string; items: NavItem[] }) => (
     <div key={section.label}>
       <div className="sidebar-section-label">{section.label}</div>
       <div className="px-3 space-y-0.5">
@@ -192,7 +200,7 @@ export function DashboardSidebar({ open, onClose }: SidebarProps) {
           <Link
             key={item.href}
             href={item.href}
-            className={`sidebar-nav-item ${isActive(item.href) ? "active" : ""}`}
+            className={`sidebar-nav-item ${isActive(item.href, item.matchChildren) ? "active" : ""}`}
             onClick={onClose}
           >
             <NavIcon icon={item.icon} size={18} />

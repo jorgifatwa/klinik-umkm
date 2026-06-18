@@ -283,7 +283,7 @@ function ConsultationsTab() {
             render: (c) => <span className="text-slate-500">{formatDate(c.scheduledAt)}</span>,
           },
           {
-            key: "scheduledAt",
+            key: "scheduledAtTime",
             header: "Jam",
             render: (c) => <span className="text-slate-500">{formatTime(c.scheduledAt)}</span>,
           },
