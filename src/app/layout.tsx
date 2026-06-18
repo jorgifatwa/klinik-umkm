@@ -3,8 +3,8 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: "SUFICSUFICSUFIC&apos;Capos;Capos;C",
-  description: "Aplikasi konsultasi dan pemeriksaan kesehatan keuangan UMKM.",
+  title: "SUFIC'C - Sustainable Financial Clinic Cianjur",
+  description: "Platform pendampingan, konsultasi, dan kesehatan keuangan UMKM untuk mewujudkan Cianjur yang berdaya melalui keuangan yang cerdas dan berkelanjutan.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

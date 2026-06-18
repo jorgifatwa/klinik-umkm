@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 /* ══════════════════════════════════════════════════════════════════
-   KLINIK KEUANGAN UMKM — Landing Page
-   Government-grade digital public service platform
+   SUFIC'C — Landing Page
+   Sustainable Financial Clinic Cianjur
    ══════════════════════════════════════════════════════════════════ */
 
 /* ── Data ──────────────────────────────────────────────────────── */
@@ -155,7 +155,7 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "Apa itu SUFICSUFICSUFIC&apos;Capos;Capos;C?",
+    q: "Apa itu SUFIC'C?",
     a: "Platform digital resmi yang membantu pelaku UMKM memahami kondisi keuangan usaha melalui assessment otomatis, mendapatkan rekomendasi pengembangan, mengakses edukasi, dan berkonsultasi dengan ahlinya.",
   },
   {
@@ -305,7 +305,7 @@ export default function Home() {
             />
             <div className="hidden sm:block">
               <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                SUFICSUFICSUFIC&apos;Capos;Capos;C
+                SUFIC'C
               </p>
               <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
                 Platform Pendampingan Keuangan
@@ -380,15 +380,15 @@ export default function Home() {
               {/* Headlines */}
               <div className="space-y-5">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
-                  Kesehatan Keuangan yang{" "}
-                  <span className="text-[#0F4C9A]">Lebih Baik</span>{" "}
-                  untuk UMKM Indonesia
+                  Mewujudkan Cianjur yang Berdaya melalui Keuangan yang Cerdas dan Berkelanjutan
                 </h1>
 
                 <p className="max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
-                  Bantu usaha Anda tumbuh melalui konsultasi, analisis
-                  kesehatan keuangan, roadmap pengembangan usaha, dan
-                  pendampingan digital.
+                  Platform pendampingan dan konsultasi keuangan untuk mendukung UMKM yang sehat, tangguh, dan berkelanjutan.
+                </p>
+
+                <p className="text-lg font-semibold text-[#0F4C9A]">
+                  Smart Finance, Sustainable Future
                 </p>
               </div>
 
@@ -444,7 +444,7 @@ export default function Home() {
                       className="h-8 w-8 rounded-lg object-cover"
                     />
                     <div>
-                      <p className="text-xs font-semibold text-gray-900">Dashboard UMKM</p>
+                      <p className="text-xs font-semibold text-gray-900">Dashboard SUFIC'C</p>
                       <p className="text-[10px] text-gray-400">Ringkasan Keuangan</p>
                     </div>
                   </div>
@@ -1022,11 +1022,14 @@ export default function Home() {
               <Link href="/" className="flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
+                  alt="SUFIC'C"
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
-                  <p className="text-sm font-bold text-[#0F4C9A]">SUFICSUFICSUFIC&apos;Capos;Capos;C</p>
+                  <p className="text-sm font-bold text-[#0F4C9A]">SUFIC'C</p>
+                  <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
+                    Sustainable Financial Clinic Cianjur
+                  </p>
                 </div>
               </Link>
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
@@ -1115,7 +1118,7 @@ export default function Home() {
           {/* Bottom Bar */}
           <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-100 py-6 sm:flex-row">
             <p className="text-xs text-gray-400">
-              © 2026 SUFICSUFICSUFIC&apos;Capos;Capos;C. Hak Cipta Dilindungi.
+              © 2026 SUFIC'C. All Rights Reserved.
             </p>
             <div className="flex items-center gap-5 text-xs text-gray-400">
               <Link href="/auth/login" className="transition-colors hover:text-[#0F4C9A]">

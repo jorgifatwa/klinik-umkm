@@ -41,7 +41,7 @@ export default async function DashboardPage() {
             <svg className="h-8 w-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
           </div>
           <h2 className="mt-6 text-xl font-semibold text-slate-900">Silakan login untuk mengakses dashboard</h2>
-          <p className="mt-2 text-sm text-slate-500">Gunakan akun UMKM Anda untuk melihat kesehatan keuangan usaha.</p>
+          <p className="mt-2 text-sm text-slate-500">Gunakan akun Anda untuk melihat kesehatan keuangan usaha.</p>
           <Link
             href="/auth/login"
             className="mt-6 inline-flex h-10 items-center rounded-xl bg-slate-900 px-5 text-sm font-medium text-white shadow-sm hover:bg-slate-800 transition-colors"
@@ -80,7 +80,7 @@ export default async function DashboardPage() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0A2540] via-[#0F4C9A] to-[#1E73D8] p-6 sm:p-8">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_20%,rgba(55,178,77,0.15),transparent_50%)]" />
             <div className="relative">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">Dashboard UMKM</p>
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">Dashboard SUFIC'C</p>
               <h1 className="mt-2 text-[24px] sm:text-[26px] font-bold text-white">
                 Halo, {user.name ?? "Pelaku UMKM"} 👋
               </h1>

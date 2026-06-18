@@ -11,12 +11,15 @@ export function PublicFooter() {
             <Link href="/" className="flex items-center gap-2.5">
               <img
                 src="/logo.png"
-                alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
+                alt="SUFIC'C"
                 className="h-8 w-8 rounded-lg object-cover"
               />
               <div>
                 <p className="text-sm font-bold text-[#0F4C9A]">
-                  SUFICSUFICSUFIC&apos;Capos;Capos;C
+                  SUFIC'C
+                </p>
+                <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
+                  Sustainable Financial Clinic Cianjur
                 </p>
               </div>
             </Link>
@@ -140,7 +143,7 @@ export function PublicFooter() {
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-100 py-6 sm:flex-row">
           <p className="text-xs text-gray-400">
-            © 2026 SUFICSUFICSUFIC&apos;Capos;Capos;C. Hak Cipta Dilindungi.
+            © 2026 SUFIC'C. All Rights Reserved.
           </p>
           <div className="flex items-center gap-5 text-xs text-gray-400">
             <Link

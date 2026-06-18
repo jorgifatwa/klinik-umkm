@@ -84,30 +84,34 @@ export default function LoginPage() {
             <div className="flex items-center gap-3 mb-14">
               <img
                 src="/logo.png"
-                alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
+                alt="SUFIC'C"
                 className="h-10 w-10 rounded-xl object-cover ring-2 ring-white/10"
               />
               <div>
                 <p className="text-sm font-bold tracking-tight text-white">
-                  SUFICSUFICSUFIC&apos;Capos;Capos;C
+                  SUFIC'C
                 </p>
                 <p className="text-[11px] font-medium text-white/40">
-                  Platform Pendampingan Keuangan
+                  Sustainable Financial Clinic Cianjur
                 </p>
               </div>
             </div>
 
             {/* Headline — Welcome Back */}
             <h1 className="text-4xl font-bold tracking-tight text-white leading-[1.15]">
-              Selamat datang
+              Selamat Datang
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#37B24D] to-[#6FCF7A]">
-                kembali
+                Kembali
               </span>
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/60 max-w-md">
-              Masuk untuk memantau kesehatan keuangan usaha Anda dan
-              lanjutkan perjalanan menuju bisnis yang lebih maju.
+              Masuk untuk melanjutkan perjalanan menuju keuangan usaha yang lebih sehat dan berkelanjutan.
+            </p>
+
+            {/* Slogan */}
+            <p className="mt-3 text-lg font-semibold text-white/80">
+              Smart Finance, Sustainable Future
             </p>
 
             {/* Benefits */}
@@ -194,15 +198,15 @@ export default function LoginPage() {
               <Link href="/" className="inline-flex items-center gap-2.5">
                 <img
                   src="/logo.png"
-                  alt="SUFICSUFICSUFIC&apos;Capos;Capos;C"
+                  alt="SUFIC'C"
                   className="h-8 w-8 rounded-lg object-cover"
                 />
                 <div>
                   <p className="text-sm font-bold tracking-tight text-[#0F4C9A]">
-                    SUFICSUFICSUFIC&apos;Capos;Capos;C
+                    SUFIC'C
                   </p>
                   <p className="text-[10px] font-medium text-gray-400 -mt-0.5">
-                    Platform Pendampingan Keuangan
+                    Sustainable Financial Clinic Cianjur
                   </p>
                 </div>
               </Link>
